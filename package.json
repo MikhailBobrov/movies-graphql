@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/EasyCoders-ru/movies-graphql/issues"
   },
-  "homepage": "https://github.com/EasyCoders-ru/movies-graphql#readme"
+  "homepage": "https://github.com/EasyCoders-ru/movies-graphql#readme",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  }
 }
