@@ -1,4 +1,4 @@
-export let movies = [
+let movies = [
   {
     id: 1,
     name: "Властелин Колец",
@@ -26,6 +26,8 @@ export let movies = [
   },
 ];
 
+export const getMovies = () => movies;
+
 export const getById = (id) => {
   const filteredMovies = movies.find((movie) => id === movie.id);
   return filteredMovies;
@@ -39,4 +41,14 @@ export const deleteMovie = (id) => {
   } else {
     return false;
   }
+};
+
+export const addMovie = (name, score) => {
+  const newMovie = {
+    id: movies.length + 1,
+    name,
+    score,
+  };
+  movies.push(newMovie);
+  return newMovie;
 };
