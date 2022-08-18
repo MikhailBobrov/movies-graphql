@@ -12,4 +12,22 @@ type Query {
   movies(limit: Int, rating: Float): [Movie]!
   movie(id: Int!): Movie
   suggestions(id: Int!): [Movie]!
+
+  movies2(limit: Int, rating: Float): [Movie]!
+}
+
+type MovieTest {
+  id: Int!
+  name: String!
+  score: Int!
+}
+
+type Query {
+  moviesTest: [MovieTest]!
+  movieTest(id: Int!): MovieTest!
+}
+
+type Mutation {
+  addMovie(name: String!, score: Int!): MovieTest!
+  deleteMovie(id: Int!): Boolean!
 }
